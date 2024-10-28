@@ -10,11 +10,9 @@ public class Student {
     double averageScoreForeignLanguage;
 
     double averageScoreOfClasses(){
-        return (averageScoreMath + averageScoreEconomic + averageScoreForeignLanguage) / 3;
-    }
-
-    void info(){
-        System.out.println("\nИмя: " + name + "\nФамилия: " + lastname + "\nНомер билета: " + ticket + "\nГод обучение: " + course + "\nСредняя оценка: " + String.format("%.1f", averageScoreOfClasses()));
+        double sredOcenka = (averageScoreMath + averageScoreEconomic + averageScoreForeignLanguage) / 3;
+        System.out.println("\nИмя: " + name + "\nФамилия: " + lastname + "\nНомер билета: " + ticket + "\nГод обучение: " + course + "\nСредняя оценка: " + String.format("%.1f", sredOcenka));
+        return sredOcenka;
     }
 }
 
@@ -46,16 +44,16 @@ class StudentTest{
         student1.averageScoreMath = 5.7;
         student1.averageScoreEconomic = 6.5;
         student1.averageScoreForeignLanguage = 6.2;
-        student1.info();
+        student1.averageScoreOfClasses();
 
         student2.averageScoreMath = 6.5;
         student2.averageScoreEconomic = 7.5;
         student2.averageScoreForeignLanguage = 7.0;
-        student2.info();
+        student2.averageScoreOfClasses();
 
         student3.averageScoreMath = 2.5;
         student3.averageScoreEconomic = 3.8;
         student3.averageScoreForeignLanguage = 3.9;
-        student3.info();
+        student3.averageScoreOfClasses();
     }
 }
