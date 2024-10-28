@@ -12,44 +12,50 @@ public class Student {
     double averageScoreOfClasses(){
         return (averageScoreMath + averageScoreEconomic + averageScoreForeignLanguage) / 3;
     }
+
+    void info(){
+        System.out.println("\nИмя: " + name + "\nФамилия: " + lastname + "\nНомер билета: " + ticket + "\nГод обучение: " + course + "\nСредняя оценка: " + String.format("%.1f", averageScoreOfClasses()));
+    }
 }
 
 class StudentTest{
 
     public static void main(String[] args) {
 
-        Student john = new Student();
-        Student sam = new Student();
-        Student alex = new Student();
+        Student student1 = new Student();
+        Student student2 = new Student();
+        Student student3 = new Student();
 
-        john.ticket = 23;
-        sam.ticket = 45;
-        alex.ticket = 51;
+        student1.ticket = 23;
+        student2.ticket = 45;
+        student3.ticket = 51;
 
-        john.name = "John";
-        sam.name = "Sam";
-        alex.name = "Alex";
+        student1.name = "John";
+        student2.name = "Sam";
+        student3.name = "Alex";
 
-        john.lastname = "Doe";
-        sam.lastname = "Martine";
-        alex.lastname = "White";
+        student1.lastname = "Doe";
+        student2.lastname = "Martine";
+        student3.lastname = "White";
 
-        john.course = 2;
-        sam.course = 3;
-        alex.course = 2;
+        student1.course = 2;
+        student2.course = 3;
+        student3.course = 2;
 
 
-        john.averageScoreMath = 5.7; john.averageScoreEconomic = 6.5; john.averageScoreForeignLanguage = 6.2;
-        double johnsAverageScore = john.averageScoreOfClasses();
-        System.out.println("\nИмя: " + john.name + "\nФамилия: " + john.lastname + "\nНомер билета: " + john.ticket + "\nГод обучение: " + john.course + "\nСредняя оценка: " + String.format("%.1f", johnsAverageScore));
+        student1.averageScoreMath = 5.7;
+        student1.averageScoreEconomic = 6.5;
+        student1.averageScoreForeignLanguage = 6.2;
+        student1.info();
 
-        sam.averageScoreMath = 6.5; sam.averageScoreEconomic = 7.5; sam.averageScoreForeignLanguage = 7.0;
-        double samAverageScore = sam.averageScoreOfClasses();
-        System.out.println("\nИмя: " + sam.name + "\nФамилия: " + sam.lastname + "\nНомер билета: " + sam.ticket + "\nГод обучение: " + sam.course + "\nСредняя оценка: " + String.format("%.1f", samAverageScore));
+        student2.averageScoreMath = 6.5;
+        student2.averageScoreEconomic = 7.5;
+        student2.averageScoreForeignLanguage = 7.0;
+        student2.info();
 
-        alex.averageScoreMath = 2.5; alex.averageScoreEconomic = 3.8; alex.averageScoreForeignLanguage = 3.9;
-        double alexesAverageScore = alex.averageScoreOfClasses();
-        System.out.println("\nИмя: " + alex.name + "\nФамилия: " + alex.lastname + "\nНомер билета: " + alex.ticket + "\nГод обучение: " + alex.course + "\nСредняя оценка: " + String.format("%.1f", alexesAverageScore));
-
+        student3.averageScoreMath = 2.5;
+        student3.averageScoreEconomic = 3.8;
+        student3.averageScoreForeignLanguage = 3.9;
+        student3.info();
     }
 }

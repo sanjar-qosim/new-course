@@ -18,6 +18,10 @@ class HumanTest {
         h.car = new Car3("red", "V8");
         h.bA = new BankAccount(18, 200.5);
         h.info();
+        h.bA.popolneniaScheta(4.5);
+        h.info();
+        h.bA.snyatieSoScheta(5.0);
+        h.info();
     }
 }
 
@@ -34,6 +38,12 @@ class BankAccount {
     BankAccount(int id2, double balance2){
         id = id2;
         balance = balance2;
+    }
+    double popolneniaScheta(double a){
+        return balance += a;
+    }
+    double snyatieSoScheta(double a){
+        return balance -= a;
     }
     int id;
     double balance;
