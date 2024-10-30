@@ -26,15 +26,17 @@ class HumanTest {
 }
 
 class Car3{
+    String color;
+    String engine;
     Car3(String c, String e){
         color = c;
         engine = e;
     }
-    String color;
-    String engine;
 }
 
 class BankAccount {
+    int id;
+    double balance;
     BankAccount(int id2, double balance2){
         id = id2;
         balance = balance2;
@@ -45,6 +47,4 @@ class BankAccount {
     double snyatieSoScheta(double a){
         return balance -= a;
     }
-    int id;
-    double balance;
 }

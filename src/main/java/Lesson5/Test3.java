@@ -48,8 +48,5 @@ class Test4 {
         car2.tormoz(50);
         car2.showInfo();
 
-
-
-
     }
 }
