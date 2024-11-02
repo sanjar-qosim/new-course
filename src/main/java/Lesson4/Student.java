@@ -9,6 +9,22 @@ public class Student {
     double averageScoreEconomic;
     double averageScoreForeignLanguage;
 
+    Student(int ticket1, String name1, String lastname1, byte course1, double averageScoreMath1, double averageScoreEconomic1, double averageScoreForeignLanguage1){
+        ticket = ticket1;
+        name = name1;
+        lastname = lastname1;
+        course = course1;
+        averageScoreMath = averageScoreMath1;
+        averageScoreEconomic = averageScoreEconomic1;
+        averageScoreForeignLanguage = averageScoreForeignLanguage1;
+    }
+    Student(int id1, String name1, String lastname1, byte course1){
+        this(id1, name1, lastname1, course1, 0.0, 0.0, 0.0);
+    }
+    Student(){
+
+    }
+
     double averageScoreOfClasses(){
         double sredOcenka = (averageScoreMath + averageScoreEconomic + averageScoreForeignLanguage) / 3;
         System.out.println("\nИмя: " + name + "\nФамилия: " + lastname + "\nНомер билета: " + ticket + "\nГод обучение: " + course + "\nСредняя оценка: " + String.format("%.1f", sredOcenka));
@@ -55,5 +71,14 @@ class StudentTest{
         student3.averageScoreEconomic = 3.8;
         student3.averageScoreForeignLanguage = 3.9;
         student3.averageScoreOfClasses();
+
+
+        Student newStudent1 = new Student(58, "Paul", "Johnson", (byte) 2, 5.5, 6.5, 7.5);
+        Student newStudent2 = new Student(65, "Margarita", "Watson", (byte) 2);
+        Student newStudent3 = new Student();
+
+        newStudent1.averageScoreOfClasses();
+        newStudent2.averageScoreOfClasses();
+        newStudent3.averageScoreOfClasses();
     }
 }
