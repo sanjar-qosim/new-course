@@ -21,9 +21,7 @@ public class Student {
     Student(int id1, String name1, String lastname1, byte course1){
         this(id1, name1, lastname1, course1, 0.0, 0.0, 0.0);
     }
-    Student(){
-
-    }
+    Student(){}
 
     double averageScoreOfClasses(){
         double sredOcenka = (averageScoreMath + averageScoreEconomic + averageScoreForeignLanguage) / 3;
