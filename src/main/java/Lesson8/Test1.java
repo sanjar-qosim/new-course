@@ -1,11 +1,25 @@
 package Lesson8;
 
 public class Test1 {
-    public final int a = 10;
+    public final int a;
+
+    Test1(){
+        a = 10;
+    }
+    Test1(boolean b){
+        a = 15;
+    }
+
+    public void abc(final short s){
+        final byte b;
+        b = 10;
+        System.out.println(s + b);
+    }
 
     public static void main(String[] args) {
-        Test1 t1 = new Test1();
-//        t1.a = t1.a * 2;
+        Test1 t1 = new Test1(true);
         System.out.println(t1.a);
+        Test1 t2 = new Test1();
+        System.out.println(t2.a);
     }
 }
