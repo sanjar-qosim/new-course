@@ -4,7 +4,8 @@ public class Student {
     static int count;
     String name;
     int course;
-    int a;
+    static int a;
+    int b;
 
     public Student(String name, int course){
         count++;
@@ -19,9 +20,35 @@ public class Student {
     public void showInfo(){
         System.out.println("Welcome to the Student class!");
     }
+    void abc(){
+        a++;
+    }
+//    Compile error! Because static method uses only static variables
+//    static void abcd(){
+//        b++;
+//    }
+
+    static void abcd(){
+        Student st1 = new Student("StaticTest", 110);
+        st1.b++;
+    }
 
     public static void main(String[] args) {
+        Student st1 = new Student("Ivan", 1);
+        Student st2 = new Student("Petr", 5);
+        Student st3 = new Student("Masha", 3);
+//        And we can use static methon without create the object
+        Student.showCount();
+        st3.showCount();
+        System.out.println(Student.count);
 
+//        Another case
+        st1.abc();
+        st2.abc();
+        st3.abc();
+        System.out.println("Test: " + Student.a);
+
+        Student.abcd();
     }
 }
 
