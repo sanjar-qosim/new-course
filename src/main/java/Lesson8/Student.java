@@ -37,7 +37,7 @@ public class Student {
         Student st1 = new Student("Ivan", 1);
         Student st2 = new Student("Petr", 5);
         Student st3 = new Student("Masha", 3);
-//        And we can use static methon without create the object
+//        And we can use static method without create the object
         Student.showCount();
         st3.showCount();
         System.out.println(Student.count);

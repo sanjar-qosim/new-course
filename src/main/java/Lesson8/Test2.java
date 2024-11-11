@@ -1,6 +1,7 @@
 package Lesson8;
 
 public class Test2 {
+
 //    Compile error! Because a variable must be initialized!
 //    public static final int a;
 
