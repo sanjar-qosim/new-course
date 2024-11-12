@@ -1,6 +1,8 @@
 package Lesson9;
 
 public class Car {
+    final int XYZ = 123;
+
     String color;
 
     String engine;
@@ -10,7 +12,7 @@ public class Car {
     int a = 10;
 
     public static void changeA(int b){
-        Car c1 = new Car("black", "V6");
+        Car c1 = new Car("black", "V8");
         c1.a = b;
     }
 
@@ -21,16 +23,8 @@ public class Car {
         this.count++;
     }
 
-    public void showColor(){
-        System.out.println("Color is: " + this.color);
-        this.changeColor("red");
-    }
-
-    public void changeColor(String color){
-        System.out.println("Color will we changed");
-        int cost = 5000;
-        this.color = color;
-        cost +=1000;
+    public static void main(String[] args) {
+        Car c1 = new Car("red", "v6");
     }
 
 }
