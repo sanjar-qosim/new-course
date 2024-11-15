@@ -1,11 +1,23 @@
 package Lesson11;
 
 public class Student {
-    String name;
-    int course;
-    double grade;
+    private String name;
+    private int course;
+    private double grade;
 
-    Student(String name, int course, double grade){
+    public String getName(){
+        return this.name;
+    }
+
+    public int getCourse(){
+        return this.course;
+    }
+
+    public double getGrade(){
+        return this.grade;
+    }
+
+     public Student(String name, int course, double grade){
         this.name = name;
         this.course = course;
         this.grade = grade;
