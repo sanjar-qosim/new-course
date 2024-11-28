@@ -31,5 +31,14 @@ public class Test1 {
         array3[1] = array5;
 
         System.out.println(array3[1][0]);
+
+        int [][] test1 = {
+            {1, 5, 10},
+            {7, 12, 17, 22},
+            {9, 14}
+        };
+
+        System.out.println(test1[2][1]);
+
     }
 }
