@@ -20,18 +20,37 @@ public class Test3 {
             System.out.print(sb + " ");
         }
 
-        System.out.println();
+        System.out.println("\n");
 
         list.remove(2);
         for (StringBuilder sb : list) {
             System.out.print(sb + " ");
         }
-        System.out.println();
+        System.out.println("\n");
 
-        list.remove("first!");
+        list.remove(sb1);
         for (StringBuilder sb : list) {
             System.out.print(sb + " ");
         }
+        System.out.println("\n");
 
+        list.add(new StringBuilder("third!"));
+        for (StringBuilder sb : list) {
+            System.out.print(sb + " ");
+        }
+        System.out.println("\n");
+
+        ArrayList <String> list2 = new ArrayList<>();
+        list2.add("first");
+        list2.add("second");
+        list2.remove("first");
+        for (String st : list2) {
+            System.out.print(st + " ");
+        }
+
+        list2.clear();
+        for (String st : list2) {
+            System.out.print(st + " ");
+        }
     }
 }
