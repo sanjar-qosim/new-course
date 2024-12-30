@@ -23,3 +23,15 @@ class Animal implements Jumpable {
 interface Jumpable {
  void jump();
 }
+
+interface A2 {
+    void abc();
+}
+
+interface B2 extends A2, Jumpable {
+    void def();
+}
+
+abstract class D implements B2 {
+//    it has all what interface A2 has
+}
