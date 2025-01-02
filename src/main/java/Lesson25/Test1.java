@@ -7,10 +7,12 @@ public class Test1 {
         Employee emp3 = new Driver();
 
         Employee [] array2 = {emp1, emp2, emp3};
-
         for (Employee emp : array2) {
             emp.work();
         }
+
+        Object o = new Object();
+        System.out.println(o instanceof Teacher);
 
     }
 }
