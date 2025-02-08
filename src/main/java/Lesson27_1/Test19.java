@@ -1,6 +1,5 @@
-package Lesson28;
+package Lesson27_1;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Test19 {
