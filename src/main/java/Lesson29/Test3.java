@@ -52,17 +52,17 @@ class StudentInfo3 {
 
         StudentInfo3 studentInfo = new StudentInfo3();
 
-        studentInfo.testStudents(list, (Student3 st) -> {return  st.avgGrade > 8.5;});
+        studentInfo.testStudents(list, (Student3 st) -> st.avgGrade > 8.5);
         System.out.println("--------------------------");
-        studentInfo.testStudents(list, (Student3 st) -> {return st.avgGrade < 9;});
+        studentInfo.testStudents(list, (Student3 st) -> st.avgGrade < 9);
         System.out.println("--------------------------");
-        studentInfo.testStudents(list, (Student3 st) -> {return st.age > 25;});
+        studentInfo.testStudents(list, (Student3 st) -> st.age > 25);
         System.out.println("--------------------------");
-        studentInfo.testStudents(list, (Student3 st) -> {return st.age < 25;});
+        studentInfo.testStudents(list, (Student3 st) -> st.age < 25);
         System.out.println("--------------------------");
-        studentInfo.testStudents(list, (Student3 st) -> {return st.sex == 'm';});
+        studentInfo.testStudents(list, (Student3 st) -> st.sex == 'm');
         System.out.println("--------------------------");
-        studentInfo.testStudents(list, (Student3 st) -> {return  st.avgGrade > 7.2 && st.age < 23 && st.sex == 'f';});
+        studentInfo.testStudents(list, (Student3 st) -> st.avgGrade > 7.2 && st.age < 23 && st.sex == 'f');
         System.out.println("--------------------------");
     }
 }
